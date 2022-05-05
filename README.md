@@ -1,5 +1,7 @@
 # vue2-leaflet-movingmarker
 
+*Thanks to Louis Mazel (https://github.com/LouisMazel/vue2-leaflet-movingmarker)*
+
 This is a [movingmarker plugin](https://gitlab.com/IvanSanchez/Leaflet.Marker.SlideTo) extension for [vue2-leaflet package](https://github.com/KoRiGaN/Vue2Leaflet)
 
 ## Install
@@ -85,7 +87,7 @@ this.$refs.movingMarkerRef.mapObject.slideTo()
 
 ## Author
 
-[Mazuel Loïc](https://github.com/LouisMazel)
+[Blue](https://github.com/blueciii)
 
 ## License
 

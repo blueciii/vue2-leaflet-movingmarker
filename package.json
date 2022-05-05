@@ -1,8 +1,8 @@
 {
-  "name": "vue2-leaflet-movingmarker",
+  "name": "vue2-leaflet-plugin-movingmarker",
   "version": "1.1.0",
   "description": "MovingMarker plugin extension for vue2-leaflet package",
-  "main": "dist/vue2-leaflet-movingmarker.common.js",
+  "main": "plugin.js",
   "scripts": {
     "build": "npm run build:lib && npm run build:docs",
     "serve": "vue-cli-service serve --mode development --open",
@@ -15,24 +15,23 @@
     "build:lib": "vue-cli-service build --target lib ./lib/index.vue"
   },
   "files": [
-    "dist/",
-    "nuxt/"
+    "src/"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/LouisMazel/vue2-leaflet-movingmarker.git"
+    "url": "git+ssh://git@github.com/blueciii/vue2-leaflet-movingmarker.git"
   },
   "keywords": [
     "vue2",
     "leaflet",
     "movingmarker"
   ],
-  "author": "Mazuel Loïc (https://github.com/LouisMazel)",
+  "author": "Blue Cuevas (https://github.com/blueciii)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/blueciii/vue2-leaflet-movingmarker/issues"
   },
-  "homepage": "https://github.com/blueciii/vue2-leaflet-movingmarker/blob/master/README.md",
+  "homepage": "https://github.com/blueciii/vue2-leaflet-movingmarker/blob/npm/README.md",
   "dependencies": {
     "vue": "^2.6.11",
     "leaflet": "^1.6.0",
