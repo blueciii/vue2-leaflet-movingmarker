@@ -15,7 +15,7 @@
     "build:lib": "vue-cli-service build --target lib ./lib/index.vue"
   },
   "files": [
-    "src/"
+    "lib/"
   ],
   "repository": {
     "type": "git",

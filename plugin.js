@@ -1,1 +1,1 @@
-export { default as LMovingMarker } from './lib/index'
+export { default as LMovingMarker } from './lib/MovingMarker'
