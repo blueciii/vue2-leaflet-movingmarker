@@ -10,8 +10,6 @@ npm install --save vue2-leaflet-movingmarker
 ```
 
 ## Demo
-
-[Enjoy here](https://louismazel.github.io/vue2-leaflet-movingmarker/)
 You can see the demo code in the file [Map.vue](./src/Map/index.vue)
 
 ## Usage
@@ -41,15 +39,12 @@ something like this
 In the same template file, at `<script>` part, this will make the component available only to the template in this file
 
 ```js
-import LMovingMarker from 'vue2-leaflet-movingmarker'
-...
+import { LMovingMarker } from 'vue2-leaflet-plugin-movingmarker'
+
 export default {
-  ...
   components: {
     LMovingMarker
-    ...
   },
-  ...
 }
 ```
 #### option 2
@@ -57,8 +52,8 @@ export default {
 At main Vue configuration, this will make the component available to all templates in your app
 ```js
 import Vue from 'vue'
-import LMovingMarker from 'vue2-leaflet-movingmarker'
-...
+import { LMovingMarker } from 'vue2-leaflet-plugin-movingmarker'
+
 Vue.component('l-moving-marker', LMovingMarker)
 ```
 
@@ -67,16 +62,14 @@ Vue.component('l-moving-marker', LMovingMarker)
 If you need to access other movingmarker methods, like [slideTo()](https://gitlab.com/movingmarker/Leaflet.Marker.SlideTo), you can do it with a ref on the movingmarker vue element and using the `mapObject` property
 
 ```html
-...
 <l-moving-marker ref="movingMarkerRef">
-  ...
 </l-moving-marker>
-...
+
 ```
+
 ```js
-...
 this.$refs.movingMarkerRef.mapObject.slideTo()
-...
+
 ```
 
 
