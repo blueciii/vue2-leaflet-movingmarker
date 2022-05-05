@@ -30,9 +30,9 @@
   "author": "Mazuel Loïc (https://github.com/LouisMazel)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LouisMazel/vue2-leaflet-movingmarker/issues"
+    "url": "https://github.com/blueciii/vue2-leaflet-movingmarker/issues"
   },
-  "homepage": "https://louismazel.github.io/vue2-leaflet-movingmarker",
+  "homepage": "https://github.com/blueciii/vue2-leaflet-movingmarker/blob/master/README.md",
   "dependencies": {
     "vue": "^2.6.11",
     "leaflet": "^1.6.0",
