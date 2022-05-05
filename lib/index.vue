@@ -1,12 +1,6 @@
-<template>
-  <div style="display: none;">
-    <slot v-if="ready" />
-  </div>
-</template>
-
 <script>
   import { marker, DomEvent, Icon } from 'leaflet'
-  import { findRealParent, propsBinder } from 'vue2-leaflet'
+  import {findRealParent, optionsMerger, propsBinder} from 'vue2-leaflet'
   import 'leaflet.marker.slideto'
 
   const props = {
@@ -55,10 +49,15 @@
       }
     },
     mounted() {
-      const options = this.options
-      if (this.icon) {
-        options.icon = this.icon
-      }
+      const options = optionsMerger(
+        {
+          ...this.layerOptions,
+          icon: this.icon,
+          zIndexOffset: this.zIndexOffset,
+          draggable: this.draggable
+        },
+        this
+      )
       options.draggable = this.draggable
       this.mapObject = marker(this.latLng, options)
       this.mapObject.on('move', ev => {
@@ -72,9 +71,12 @@
       })
       DomEvent.on(this.mapObject, this.$listeners)
       propsBinder(this, this.mapObject, props)
-      this.ready = true
       this.parentContainer = findRealParent(this.$parent)
       this.parentContainer.addLayer(this, !this.visible)
+      this.ready = true
+      this.$nextTick(() => {
+        this.$emit('ready', this.mapObject)
+      })
     },
     beforeDestroy() {
       this.parentContainer.removeLayer(this)
@@ -116,7 +118,17 @@
             })
           }
         }
+      },
+      latLngSync(event) {
+        this.$emit('update:latLng', event.latlng)
+        this.$emit('update:lat-lng', event.latlng)
       }
+    },
+    render: function (h) {
+      if (this.ready && this.$slots.default) {
+        return h('div', { style: { display: 'none' } }, this.$slots.default)
+      }
+      return null
     }
   }
 </script>

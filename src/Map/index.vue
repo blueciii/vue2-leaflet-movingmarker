@@ -16,7 +16,11 @@
       :keep-at-center="keepAtCenter"
       :icon="icon"
     >
-      <l-popup :content="l.text" />
+      <l-popup>
+        <div>
+          <h3>{{ l.text }}</h3>
+        </div>
+      </l-popup>
     </l-moving-marker>
   </l-map>
 </template>
