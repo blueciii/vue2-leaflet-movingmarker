@@ -68,6 +68,7 @@
           this.latLng.lat = ev.latlng.lat
           this.latLng.lng = ev.latlng.lng
         }
+        this.latLngSync(ev)
       })
       DomEvent.on(this.mapObject, this.$listeners)
       propsBinder(this, this.mapObject, props)
