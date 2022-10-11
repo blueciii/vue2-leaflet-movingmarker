@@ -28,7 +28,7 @@
 <script>
   import L from 'leaflet'
   import { LMap, LTileLayer, LIconDefault, LPopup } from 'vue2-leaflet'
-  import LMovingMarker from '../../lib/index.vue'
+  import LMovingMarker from '../../lib/MovingMarker.vue'
 
   function rand(n) {
     const max = n + 0.01
