@@ -6,13 +6,12 @@
   "scripts": {
     "build": "npm run build:lib && npm run build:docs",
     "serve": "vue-cli-service serve --mode development --open",
-    "serve:nuxt": "nuxt src",
     "test": "vue-cli-service test:unit /test/specs",
     "lint": "vue-cli-service lint",
     "lint:style:fix": "npm run lint -- --fix",
     "pre-publish": "npm run lint && npm i && npm run build",
     "build:docs": "vue-cli-service build --dest docs --mode production",
-    "build:lib": "vue-cli-service build --target lib ./lib/index.vue"
+    "build:lib": "vue-cli-service build --target lib ./lib/MovingMarker.vue"
   },
   "files": [
     "lib/"
@@ -47,7 +46,6 @@
     "core-js": "^3.6.5",
     "eslint": "^7.2.0",
     "eslint-plugin-vue": "^6.2.2",
-    "nuxt": "^2.12.2",
     "path": "^0.12.7",
     "vue-server-renderer": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
